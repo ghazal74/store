@@ -158,93 +158,134 @@
 
 
 /*logo*/
-    .photo{
-        width: 350px;
-        height: 300px;
-        padding-bottom: 10px;
-        text-align: center;
-        transform: translate(0% , 14%);
+    /* ✅ تحسين الصور لتكون متجاوبة */
+    .photo {
+      width: 100%;
+      max-width: 350px;
+      height: auto;
+      /* جعل الارتفاع تلقائيًا ليتناسب مع العرض */
+      padding-bottom: 10px;
+      text-align: center;
+      margin: auto;
     }
-a{
-    text-decoration: none;
-    color: black;
-    width: 5px;
-}
-
-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: left;
-}
-
-/* almotabaed word*/
-.container3 {
-  text-align: center; /* Center the text */
-  transform: translate(0% , -450%);
-}
-
-.almotabaed {
-  font-size: 4em; 
-  color: #333; 
-   font-weight: bold; 
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.2); 
-  letter-spacing : 0.1em;
-    
-}
-.almotabaed :hover{
-  background-color: black;
-    color: #ffffff;
-    box-shadow: 0 6px 12px rgba(99, 102, 241, 0.4);
-}
-
-/* Responsive Design (Example) */
-@media (max-width: 768px) {
-  .almotabaed {
-      font-size: 3em;
-  }
-}
-.container6 {
-transform: translate(0% , -650%);
-}
-
-ul{
-    width: 60%;
-    list-style: none;
-    display: flex;
-    justify-content: space-evenly;
-    padding-top: 10px;
-    font-size: 15px;
-    
-}
-ul a{
-    border-bottom: 2px solid transparent;
-    color:black(44, 44, 145);
-    font-size: 20px;
-    font-style: inherit;
-    text-decoration: none;
-}
-ul a:hover{
-    border-bottom-color: black;
-}
-@media (max-width: 768px) {
-  .ul  {
-      font-size: 3em;
-  }
-}
-
-
-/*support*/
-.support{
-    padding-left:20% ;
-    transform: translate(-5% , 30%);
-    
-}
-.support a{
-    color: blue;
-    
-}
-
-
+  
+    /* ✅ تحسين الروابط */
+    a {
+      text-decoration: none;
+      color: black;
+    }
+  
+    /* ✅ تحسين الهيدر ليكون متجاوبًا */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      /* تصحيح `left` إلى `center` */
+      flex-wrap: wrap;
+      /* السماح للعناصر بالانتقال عند الحاجة */
+      padding: 10px;
+    }
+  
+    /* ✅ تحسين النصوص */
+    .container3 {
+      text-align: center;
+      margin-top: 20px;
+      /* استبدال transform بمسافة طبيعية */
+    }
+  
+    .almotabaed {
+      font-size: 4em;
+      color: #333;
+      font-weight: bold;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+      letter-spacing: 0.1em;
+    }
+  
+    .almotabaed:hover {
+      background-color: black;
+      color: #ffffff;
+      box-shadow: 0 6px 12px rgba(99, 102, 241, 0.4);
+    }
+  
+    /* ✅ تحسين القائمة */
+    .container6 {
+      margin-top: 20px;
+      /* استبدال transform */
+    }
+  
+    ul {
+      width: 100%;
+      max-width: 600px;
+      /* ضبط الحد الأقصى */
+      list-style: none;
+      display: flex;
+      justify-content: space-evenly;
+      padding-top: 10px;
+      font-size: 15px;
+      flex-wrap: wrap;
+      /* السماح للعناصر بالانتقال في الشاشات الصغيرة */
+    }
+  
+    ul a {
+      border-bottom: 2px solid transparent;
+      color: black;
+      font-size: 18px;
+      font-style: inherit;
+      text-decoration: none;
+      padding: 5px;
+    }
+  
+    ul a:hover {
+      border-bottom-color: black;
+    }
+  
+    /* ✅ تحسين الدعم */
+    .support {
+      padding-left: 5%;
+      text-align: center;
+      margin-top: 20px;
+      /* استبدال transform */
+    }
+  
+    .support a {
+      color: blue;
+    }
+  
+    /* ✅ تحسين الموقع للأجهزة اللوحية والموبايل */
+    @media (max-width: 768px) {
+      .almotabaed {
+        font-size: 3em;
+      }
+  
+      ul {
+        flex-direction: column;
+        align-items: center;
+        font-size: 14px;
+      }
+  
+      ul li {
+        padding: 5px 0;
+      }
+  
+      .photo {
+        max-width: 250px;
+      }
+    }
+  
+    /* ✅ تحسين التصميم للأجهزة الصغيرة جدًا (موبايلات أقل من 480px) */
+    @media (max-width: 480px) {
+      .almotabaed {
+        font-size: 2em;
+      }
+  
+      ul {
+        font-size: 12px;
+      }
+  
+      .photo {
+        max-width: 200px;
+      }
+    }
 /*search*/
 .search-container {
     position: relative;
